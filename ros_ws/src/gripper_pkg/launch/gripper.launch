@@ -1,0 +1,14 @@
+<launch>
+
+	<node pkg="gripper_pkg" type="stepper_service_provider" name="step_server" output="screen" >
+	</node>
+	
+	<node pkg="gripper_pkg" type="servo_service_provider" name="grip_server" output="screen" >
+	</node>
+
+	<node pkg="gripper_pkg" type="base_node" name="master_node" output="screen" >
+	</node>
+	
+
+	
+</launch>

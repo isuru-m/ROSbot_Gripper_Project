@@ -1,0 +1,5 @@
+float32 distance
+bool initialise 
+bool direction
+---
+bool success

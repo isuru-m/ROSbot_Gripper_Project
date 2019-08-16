@@ -1,0 +1,8 @@
+# Define the goal
+float32 distance # distance to move the stepper
+---
+# Define the results
+bool success # was the action successful?
+---
+# Define a feedback message 
+float32 percent_complete # 
