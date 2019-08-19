@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <string>
 #include <sensor_msgs/Range.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/UInt32.h>
@@ -21,6 +22,8 @@ geometry_msgs::Vector3 servo_msg;
 */
 
 int c = 0;
+enum state {init, wait, openGripper, closeGripper, moveZaxisUp, moveZaxisDown, shutdown};
+state current_state = init;
 
 void rangefrCallback(const sensor_msgs::Range::ConstPtr& range)
 {
@@ -70,7 +73,79 @@ int main(int argc, char **argv)
 	ac_.waitForServer();
 	gripper_pkg::stepActionGoal goal;
 
-				
+	while (ros::ok())
+	{
+		switch (current_state)
+		{
+			case init:
+			{
+				goal.initialise = true; //  true value for this should ignore the direction request
+				ac_.sendGoal(goal);
+	
+				bool finished_b4_timeout = ac_.waitForResult(ros::Duration(60)); // TImeout the action in 60 secs
+				ros::Duration(1).sleep();
+				current_state = openGripper;
+				break;
+			}
+			case openGripper:
+			{
+			 	// Call the servo service
+				grip_srv.request.radius = 0.0;
+				gripClient.call(grip_srv);
+				ros::Duration(1).sleep();
+				current_state = moveZaxisDown;
+				break;
+			}
+			case closeGripper:
+			{
+			 	// Call the servo service
+				grip_srv.request.radius = 40.0;
+				gripClient.call(grip_srv);
+				ros::Duration(1).sleep();
+				current_state = moveZaxisUp;
+				break;
+			}
+			case moveZaxisUp:
+			{
+				// Call the stepper action
+				goal.distance = 50;
+				goal.direction = true; // false- move downwards, true- upwards
+				goal.initialise = false; //  true value for this should ignore the direction request
+				ac_.sendGoal(goal);
+	
+				bool finished_b4_timeout = ac_.waitForResult(ros::Duration(100)); // TImeout the action in 60 secs
+				ros::Duration(1).sleep();
+				current_state = wait;
+				break;
+			}
+			case moveZaxisDown:
+			{	
+				// Call the stepper action
+				goal.distance = 80;
+				goal.direction = false; // false- move downwards, true- upwards
+				goal.initialise = false; //  true value for this should ignore the direction request
+				ac_.sendGoal(goal);
+	
+				bool finished_b4_timeout = ac_.waitForResult(ros::Duration(100)); // TImeout the action in 60 secs
+				ros::Duration(1).sleep();
+				current_state = closeGripper;
+				break;
+			}
+			case wait:
+			{
+				ROS_INFO("Current state: Wait");
+				break; 
+			}
+			case shutdown:
+			{
+				return 0;
+				ros::shutdown();
+			}
+			default:
+			{break;}
+		}	
+	}
+	/*			
 	// Call the servo service
 	grip_srv.request.radius = 40.0;
 	gripClient.call(grip_srv);
