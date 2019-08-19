@@ -1,5 +1,7 @@
 # Define the goal
 float32 distance # distance to move the stepper
+bool direction
+bool initialise 
 ---
 # Define the results
 bool success # was the action successful?
