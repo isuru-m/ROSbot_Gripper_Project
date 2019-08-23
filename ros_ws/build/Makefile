@@ -283,6 +283,45 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named custom_move_base
+
+# Build rule for target.
+custom_move_base: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 custom_move_base
+.PHONY : custom_move_base
+
+# fast build rule for target.
+custom_move_base/fast:
+	$(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/build
+.PHONY : custom_move_base/fast
+
+#=============================================================================
+# Target rules for targets named imu_controller
+
+# Build rule for target.
+imu_controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 imu_controller
+.PHONY : imu_controller
+
+# fast build rule for target.
+imu_controller/fast:
+	$(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/build
+.PHONY : imu_controller/fast
+
+#=============================================================================
+# Target rules for targets named object_detector
+
+# Build rule for target.
+object_detector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detector
+.PHONY : object_detector
+
+# fast build rule for target.
+object_detector/fast:
+	$(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/build
+.PHONY : object_detector/fast
+
+#=============================================================================
 # Target rules for targets named drive_controller
 
 # Build rule for target.
@@ -1305,6 +1344,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... custom_move_base"
+	@echo "... imu_controller"
+	@echo "... object_detector"
 	@echo "... drive_controller"
 	@echo "... base_node"
 	@echo "... gripper_pkg_genpy"

@@ -22,7 +22,7 @@ protected:
 	//Subcribers 
 	ros::Subscriber end_stop_sub;
 	float limit; 
-	float total_distance; 
+	float total_distance; // used to keep track of distance travelled over pick-place cycles. 
 	
 	//Pulishers
 	ros::Publisher enable_pub;
@@ -100,7 +100,7 @@ public:
 		if (goal->initialise)
 		{
 			
-			dir_msg.data = true; // false- move downwards, true- upwards
+			dir_msg.data = true; // set to true regardless: initilaise is always up
 			dir_pub.publish(dir_msg);
 		
 			while(limit)
@@ -131,6 +131,9 @@ public:
 		{
 			double distance = goal->distance;
 			ROS_INFO("Distance recieved %f", distance);
+			
+			total_distance = goal->direction ? total_distance += distance : total_distance -= distance;
+			distance = (total_distance > 0) ? (distance-total_distance) : distance;
 	
 			double stepper_time = dist2time(distance);  // Calculate time to move a given distance
 	
@@ -162,10 +165,7 @@ public:
 	
 			enable_msg.data = true; // turn the motor off
 			enable_pub.publish(enable_msg);
-			ROS_INFO("Gripper Stopped");
-
-			total_distance = goal->direction ? total_distance += distance : total_distance -= distance;
-			
+			ROS_INFO("Gripper Stopped");			
 			ROS_INFO("Total distance: [%f]", total_distance);
 		}
 		

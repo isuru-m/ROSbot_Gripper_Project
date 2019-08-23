@@ -1,2 +1,0 @@
-gripper_pkg:simple_navigation_goals
--DCATKIN_DEVEL_PREFIX=/home/husarion/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/husarion/ros_ws/install -G Unix Makefiles

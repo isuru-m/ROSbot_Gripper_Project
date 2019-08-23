@@ -14,6 +14,9 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib_msgs
 )
 
+find_package(OpenCV REQUIRED
+)
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -128,6 +131,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -151,6 +155,9 @@ include_directories(
  add_executable(servo_service_provider src/servo_service_provider.cpp)
  add_executable(stepper_action_server src/stepper_action_server.cpp)
  add_executable(drive_controller src/drive_controller.cpp)
+ add_executable(object_detector src/object_detector.cpp)
+ add_executable(imu_controller src/imu_controller.cpp)
+ add_executable(custom_move_base src/custom_move_base.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -188,6 +195,20 @@ include_directories(
    ${catkin_LIBRARIES}
  )
  
+ target_link_libraries(imu_controller
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
+
+ target_link_libraries(object_detector
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
+ 
+ target_link_libraries(custom_move_base
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
  
 #############
 ## Install ##

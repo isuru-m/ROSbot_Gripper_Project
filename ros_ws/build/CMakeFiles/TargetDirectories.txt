@@ -32,6 +32,9 @@
 /home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/list_install_components.dir
 /home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/install.dir
 /home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/install/local.dir
+/home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/custom_move_base.dir
+/home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/imu_controller.dir
+/home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/object_detector.dir
 /home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/drive_controller.dir
 /home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/base_node.dir
 /home/husarion/ros_ws/build/gripper_pkg/CMakeFiles/gripper_pkg_genpy.dir

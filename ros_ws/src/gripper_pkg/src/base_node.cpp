@@ -108,7 +108,7 @@ int main(int argc, char **argv)
 			case moveZaxisUp:
 			{
 				// Call the stepper action
-				goal.distance = 50;
+				goal.distance = 5;
 				goal.direction = true; // false- move downwards, true- upwards
 				goal.initialise = false; //  true value for this should ignore the direction request
 				ac_.sendGoal(goal);
@@ -121,12 +121,12 @@ int main(int argc, char **argv)
 			case moveZaxisDown:
 			{	
 				// Call the stepper action
-				goal.distance = 80;
+				goal.distance = 40;
 				goal.direction = false; // false- move downwards, true- upwards
 				goal.initialise = false; //  true value for this should ignore the direction request
 				ac_.sendGoal(goal);
 	
-				bool finished_b4_timeout = ac_.waitForResult(ros::Duration(100)); // TImeout the action in 60 secs
+				bool finished_b4_timeout = ac_.waitForResult(ros::Duration(100)); // Timeout the action in 60 secs
 				ros::Duration(1).sleep();
 				current_state = closeGripper;
 				break;
@@ -143,7 +143,9 @@ int main(int argc, char **argv)
 			}
 			default:
 			{break;}
-		}	
+		}
+		ros::spinOnce();
+		loop_rate.sleep();	
 	}
 	/*			
 	// Call the servo service

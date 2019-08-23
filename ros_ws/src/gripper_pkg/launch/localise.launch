@@ -1,0 +1,42 @@
+<launch>
+  <master auto="start"/>
+
+  <!-- Map server -->
+  <arg name="map_file" default="$(find gripper_pkg)/maps/computerLabMap.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  
+  <!--Transformations--> 
+    <node pkg="gripper_pkg" type="drive_controller" name="drive_controller"/>
+    <node pkg="gripper_pkg" type="imu_controller" name="imu_controller"/>
+    <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0 0 0 3.14 0 0 base_link laser_frame 100" />
+    <node pkg="rplidar_ros" type="rplidarNode" name="rplidarNode"/>
+
+  <!-- Localization -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <remap from="scan" to="/scan"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="odom_model_type" value="diff-corrected"/>
+    <param name="base_frame_id" value="base_link"/>
+    <param name="update_min_d" value="0.1"/>
+    <param name="update_min_a" value="0.2"/>
+    <param name="min_particles" value="500"/>
+  </node>
+
+  <!-- Move base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find gripper_pkg)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find gripper_pkg)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find gripper_pkg)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find gripper_pkg)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find gripper_pkg)/config/trajectory_planner.yaml" command="load" />
+
+    <remap from="cmd_vel" to="/cmd_vel"/>
+    <remap from="odom" to="/odom"/>
+    <remap from="scan" to="/scan"/>
+    <param name="move_base/DWAPlannerROS/yaw_goal_tolerance" value="1.0"/>
+    <param name="move_base/DWAPlannerROS/xy_goal_tolerance" value="1.0"/>
+
+  </node>
+    
+    
+</launch>

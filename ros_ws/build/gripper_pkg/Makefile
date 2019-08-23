@@ -166,6 +166,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+gripper_pkg/CMakeFiles/custom_move_base.dir/rule:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/custom_move_base.dir/rule
+.PHONY : gripper_pkg/CMakeFiles/custom_move_base.dir/rule
+
+# Convenience name for target.
+custom_move_base: gripper_pkg/CMakeFiles/custom_move_base.dir/rule
+
+.PHONY : custom_move_base
+
+# fast build rule for target.
+custom_move_base/fast:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/build
+.PHONY : custom_move_base/fast
+
+# Convenience name for target.
+gripper_pkg/CMakeFiles/imu_controller.dir/rule:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/imu_controller.dir/rule
+.PHONY : gripper_pkg/CMakeFiles/imu_controller.dir/rule
+
+# Convenience name for target.
+imu_controller: gripper_pkg/CMakeFiles/imu_controller.dir/rule
+
+.PHONY : imu_controller
+
+# fast build rule for target.
+imu_controller/fast:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/build
+.PHONY : imu_controller/fast
+
+# Convenience name for target.
+gripper_pkg/CMakeFiles/object_detector.dir/rule:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/object_detector.dir/rule
+.PHONY : gripper_pkg/CMakeFiles/object_detector.dir/rule
+
+# Convenience name for target.
+object_detector: gripper_pkg/CMakeFiles/object_detector.dir/rule
+
+.PHONY : object_detector
+
+# fast build rule for target.
+object_detector/fast:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/build
+.PHONY : object_detector/fast
+
+# Convenience name for target.
 gripper_pkg/CMakeFiles/drive_controller.dir/rule:
 	cd /home/husarion/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/drive_controller.dir/rule
 .PHONY : gripper_pkg/CMakeFiles/drive_controller.dir/rule
@@ -1242,6 +1287,33 @@ src/base_node.cpp.s:
 	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/base_node.dir/build.make gripper_pkg/CMakeFiles/base_node.dir/src/base_node.cpp.s
 .PHONY : src/base_node.cpp.s
 
+src/custom_move_base.o: src/custom_move_base.cpp.o
+
+.PHONY : src/custom_move_base.o
+
+# target to build an object file
+src/custom_move_base.cpp.o:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/src/custom_move_base.cpp.o
+.PHONY : src/custom_move_base.cpp.o
+
+src/custom_move_base.i: src/custom_move_base.cpp.i
+
+.PHONY : src/custom_move_base.i
+
+# target to preprocess a source file
+src/custom_move_base.cpp.i:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/src/custom_move_base.cpp.i
+.PHONY : src/custom_move_base.cpp.i
+
+src/custom_move_base.s: src/custom_move_base.cpp.s
+
+.PHONY : src/custom_move_base.s
+
+# target to generate assembly for a file
+src/custom_move_base.cpp.s:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/src/custom_move_base.cpp.s
+.PHONY : src/custom_move_base.cpp.s
+
 src/drive_controller.o: src/drive_controller.cpp.o
 
 .PHONY : src/drive_controller.o
@@ -1268,6 +1340,60 @@ src/drive_controller.s: src/drive_controller.cpp.s
 src/drive_controller.cpp.s:
 	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/drive_controller.dir/build.make gripper_pkg/CMakeFiles/drive_controller.dir/src/drive_controller.cpp.s
 .PHONY : src/drive_controller.cpp.s
+
+src/imu_controller.o: src/imu_controller.cpp.o
+
+.PHONY : src/imu_controller.o
+
+# target to build an object file
+src/imu_controller.cpp.o:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/src/imu_controller.cpp.o
+.PHONY : src/imu_controller.cpp.o
+
+src/imu_controller.i: src/imu_controller.cpp.i
+
+.PHONY : src/imu_controller.i
+
+# target to preprocess a source file
+src/imu_controller.cpp.i:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/src/imu_controller.cpp.i
+.PHONY : src/imu_controller.cpp.i
+
+src/imu_controller.s: src/imu_controller.cpp.s
+
+.PHONY : src/imu_controller.s
+
+# target to generate assembly for a file
+src/imu_controller.cpp.s:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/src/imu_controller.cpp.s
+.PHONY : src/imu_controller.cpp.s
+
+src/object_detector.o: src/object_detector.cpp.o
+
+.PHONY : src/object_detector.o
+
+# target to build an object file
+src/object_detector.cpp.o:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/src/object_detector.cpp.o
+.PHONY : src/object_detector.cpp.o
+
+src/object_detector.i: src/object_detector.cpp.i
+
+.PHONY : src/object_detector.i
+
+# target to preprocess a source file
+src/object_detector.cpp.i:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/src/object_detector.cpp.i
+.PHONY : src/object_detector.cpp.i
+
+src/object_detector.s: src/object_detector.cpp.s
+
+.PHONY : src/object_detector.s
+
+# target to generate assembly for a file
+src/object_detector.cpp.s:
+	cd /home/husarion/ros_ws/build && $(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/src/object_detector.cpp.s
+.PHONY : src/object_detector.cpp.s
 
 src/servo_service_provider.o: src/servo_service_provider.cpp.o
 
@@ -1360,6 +1486,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... install/local"
+	@echo "... custom_move_base"
+	@echo "... imu_controller"
+	@echo "... object_detector"
 	@echo "... drive_controller"
 	@echo "... base_node"
 	@echo "... gripper_pkg_genpy"
@@ -1436,9 +1565,18 @@ help:
 	@echo "... src/base_node.o"
 	@echo "... src/base_node.i"
 	@echo "... src/base_node.s"
+	@echo "... src/custom_move_base.o"
+	@echo "... src/custom_move_base.i"
+	@echo "... src/custom_move_base.s"
 	@echo "... src/drive_controller.o"
 	@echo "... src/drive_controller.i"
 	@echo "... src/drive_controller.s"
+	@echo "... src/imu_controller.o"
+	@echo "... src/imu_controller.i"
+	@echo "... src/imu_controller.s"
+	@echo "... src/object_detector.o"
+	@echo "... src/object_detector.i"
+	@echo "... src/object_detector.s"
 	@echo "... src/servo_service_provider.o"
 	@echo "... src/servo_service_provider.i"
 	@echo "... src/servo_service_provider.s"

@@ -1,8 +1,0 @@
-prefix=/home/husarion/ros_ws/install
-
-Name: gripper_pkg
-Description: Description of gripper_pkg
-Version: 0.0.0
-Cflags: -I/home/husarion/ros_ws/install/include
-Libs: -L/home/husarion/ros_ws/install/lib 
-Requires: 

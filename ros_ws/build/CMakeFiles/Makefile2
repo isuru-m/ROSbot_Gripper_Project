@@ -246,7 +246,7 @@ gtest/preinstall: gtest/gtest/preinstall
 gtest/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=5,6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=7,8,9 "Built target gmock"
 .PHONY : gtest/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -278,7 +278,7 @@ clean: gtest/CMakeFiles/gmock.dir/clean
 gtest/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=8,9,10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=10,11,12,13 "Built target gmock_main"
 .PHONY : gtest/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -329,7 +329,7 @@ gtest/gtest/preinstall:
 gtest/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=60,61 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=62,63 "Built target gtest"
 .PHONY : gtest/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -361,7 +361,7 @@ clean: gtest/gtest/CMakeFiles/gtest.dir/clean
 gtest/gtest/CMakeFiles/gtest_main.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=62,63 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=64,65 "Built target gtest_main"
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -390,6 +390,9 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory gripper_pkg
 
 # Convenience name for "all" pass in the directory.
+gripper_pkg/all: gripper_pkg/CMakeFiles/custom_move_base.dir/all
+gripper_pkg/all: gripper_pkg/CMakeFiles/imu_controller.dir/all
+gripper_pkg/all: gripper_pkg/CMakeFiles/object_detector.dir/all
 gripper_pkg/all: gripper_pkg/CMakeFiles/drive_controller.dir/all
 gripper_pkg/all: gripper_pkg/CMakeFiles/base_node.dir/all
 gripper_pkg/all: gripper_pkg/CMakeFiles/stepper_action_server.dir/all
@@ -400,6 +403,9 @@ gripper_pkg/all: gripper_pkg/CMakeFiles/gripper_pkg_generate_messages.dir/all
 .PHONY : gripper_pkg/all
 
 # Convenience name for "clean" pass in the directory.
+gripper_pkg/clean: gripper_pkg/CMakeFiles/custom_move_base.dir/clean
+gripper_pkg/clean: gripper_pkg/CMakeFiles/imu_controller.dir/clean
+gripper_pkg/clean: gripper_pkg/CMakeFiles/object_detector.dir/clean
 gripper_pkg/clean: gripper_pkg/CMakeFiles/drive_controller.dir/clean
 gripper_pkg/clean: gripper_pkg/CMakeFiles/base_node.dir/clean
 gripper_pkg/clean: gripper_pkg/CMakeFiles/gripper_pkg_genpy.dir/clean
@@ -479,13 +485,124 @@ gripper_pkg/preinstall:
 .PHONY : gripper_pkg/preinstall
 
 #=============================================================================
+# Target rules for target gripper_pkg/CMakeFiles/custom_move_base.dir
+
+# All Build rule for target.
+gripper_pkg/CMakeFiles/custom_move_base.dir/all:
+	$(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/depend
+	$(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=3,4 "Built target custom_move_base"
+.PHONY : gripper_pkg/CMakeFiles/custom_move_base.dir/all
+
+# Include target in all.
+all: gripper_pkg/CMakeFiles/custom_move_base.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+gripper_pkg/CMakeFiles/custom_move_base.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/custom_move_base.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ros_ws/build/CMakeFiles 0
+.PHONY : gripper_pkg/CMakeFiles/custom_move_base.dir/rule
+
+# Convenience name for target.
+custom_move_base: gripper_pkg/CMakeFiles/custom_move_base.dir/rule
+
+.PHONY : custom_move_base
+
+# clean rule for target.
+gripper_pkg/CMakeFiles/custom_move_base.dir/clean:
+	$(MAKE) -f gripper_pkg/CMakeFiles/custom_move_base.dir/build.make gripper_pkg/CMakeFiles/custom_move_base.dir/clean
+.PHONY : gripper_pkg/CMakeFiles/custom_move_base.dir/clean
+
+# clean rule for target.
+clean: gripper_pkg/CMakeFiles/custom_move_base.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target gripper_pkg/CMakeFiles/imu_controller.dir
+
+# All Build rule for target.
+gripper_pkg/CMakeFiles/imu_controller.dir/all:
+	$(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/depend
+	$(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=66,67 "Built target imu_controller"
+.PHONY : gripper_pkg/CMakeFiles/imu_controller.dir/all
+
+# Include target in all.
+all: gripper_pkg/CMakeFiles/imu_controller.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+gripper_pkg/CMakeFiles/imu_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/imu_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ros_ws/build/CMakeFiles 0
+.PHONY : gripper_pkg/CMakeFiles/imu_controller.dir/rule
+
+# Convenience name for target.
+imu_controller: gripper_pkg/CMakeFiles/imu_controller.dir/rule
+
+.PHONY : imu_controller
+
+# clean rule for target.
+gripper_pkg/CMakeFiles/imu_controller.dir/clean:
+	$(MAKE) -f gripper_pkg/CMakeFiles/imu_controller.dir/build.make gripper_pkg/CMakeFiles/imu_controller.dir/clean
+.PHONY : gripper_pkg/CMakeFiles/imu_controller.dir/clean
+
+# clean rule for target.
+clean: gripper_pkg/CMakeFiles/imu_controller.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target gripper_pkg/CMakeFiles/object_detector.dir
+
+# All Build rule for target.
+gripper_pkg/CMakeFiles/object_detector.dir/all:
+	$(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/depend
+	$(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=68,69 "Built target object_detector"
+.PHONY : gripper_pkg/CMakeFiles/object_detector.dir/all
+
+# Include target in all.
+all: gripper_pkg/CMakeFiles/object_detector.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+gripper_pkg/CMakeFiles/object_detector.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 gripper_pkg/CMakeFiles/object_detector.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ros_ws/build/CMakeFiles 0
+.PHONY : gripper_pkg/CMakeFiles/object_detector.dir/rule
+
+# Convenience name for target.
+object_detector: gripper_pkg/CMakeFiles/object_detector.dir/rule
+
+.PHONY : object_detector
+
+# clean rule for target.
+gripper_pkg/CMakeFiles/object_detector.dir/clean:
+	$(MAKE) -f gripper_pkg/CMakeFiles/object_detector.dir/build.make gripper_pkg/CMakeFiles/object_detector.dir/clean
+.PHONY : gripper_pkg/CMakeFiles/object_detector.dir/clean
+
+# clean rule for target.
+clean: gripper_pkg/CMakeFiles/object_detector.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target gripper_pkg/CMakeFiles/drive_controller.dir
 
 # All Build rule for target.
 gripper_pkg/CMakeFiles/drive_controller.dir/all:
 	$(MAKE) -f gripper_pkg/CMakeFiles/drive_controller.dir/build.make gripper_pkg/CMakeFiles/drive_controller.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/drive_controller.dir/build.make gripper_pkg/CMakeFiles/drive_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=3,4 "Built target drive_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=5,6 "Built target drive_controller"
 .PHONY : gripper_pkg/CMakeFiles/drive_controller.dir/all
 
 # Include target in all.
@@ -601,7 +718,7 @@ gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/all: gripper_pkg/CMa
 gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/all: gripper_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=49,50,51,52,53,54,55,56,57,58,59 "Built target gripper_pkg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61 "Built target gripper_pkg_generate_messages_py"
 .PHONY : gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -761,7 +878,7 @@ clean: gripper_pkg/CMakeFiles/_gripper_pkg_generate_messages_check_deps_stepServ
 gripper_pkg/CMakeFiles/stepper_action_server.dir/all:
 	$(MAKE) -f gripper_pkg/CMakeFiles/stepper_action_server.dir/build.make gripper_pkg/CMakeFiles/stepper_action_server.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/stepper_action_server.dir/build.make gripper_pkg/CMakeFiles/stepper_action_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=68,69 "Built target stepper_action_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=74,75 "Built target stepper_action_server"
 .PHONY : gripper_pkg/CMakeFiles/stepper_action_server.dir/all
 
 # Include target in all.
@@ -1246,7 +1363,7 @@ clean: gripper_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 gripper_pkg/CMakeFiles/servo_service_provider.dir/all:
 	$(MAKE) -f gripper_pkg/CMakeFiles/servo_service_provider.dir/build.make gripper_pkg/CMakeFiles/servo_service_provider.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/servo_service_provider.dir/build.make gripper_pkg/CMakeFiles/servo_service_provider.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=64,65 "Built target servo_service_provider"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=70,71 "Built target servo_service_provider"
 .PHONY : gripper_pkg/CMakeFiles/servo_service_provider.dir/all
 
 # Include target in all.
@@ -1475,7 +1592,7 @@ clean: gripper_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 gripper_pkg/CMakeFiles/stepper_service_provider.dir/all:
 	$(MAKE) -f gripper_pkg/CMakeFiles/stepper_service_provider.dir/build.make gripper_pkg/CMakeFiles/stepper_service_provider.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/stepper_service_provider.dir/build.make gripper_pkg/CMakeFiles/stepper_service_provider.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=70,71 "Built target stepper_service_provider"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=76,77 "Built target stepper_service_provider"
 .PHONY : gripper_pkg/CMakeFiles/stepper_service_provider.dir/all
 
 # Include target in all.
@@ -1650,7 +1767,7 @@ gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/all: gripper_pkg/C
 gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/all: gripper_pkg/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39 "Built target gripper_pkg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=33,34,35,36,37,38,39,40,41 "Built target gripper_pkg_generate_messages_lisp"
 .PHONY : gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2364,7 +2481,7 @@ gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/all: gripper_pkg
 gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/all: gripper_pkg/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48 "Built target gripper_pkg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=42,43,44,45,46,47,48,49,50 "Built target gripper_pkg_generate_messages_nodejs"
 .PHONY : gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2502,7 +2619,7 @@ gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/all: gripper_pkg/CM
 gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/all: gripper_pkg/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30 "Built target gripper_pkg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Built target gripper_pkg_generate_messages_eus"
 .PHONY : gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2608,7 +2725,7 @@ gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/all: gripper_pkg/CM
 gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/all: gripper_pkg/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/depend
 	$(MAKE) -f gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/build.make gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20 "Built target gripper_pkg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22 "Built target gripper_pkg_generate_messages_cpp"
 .PHONY : gripper_pkg/CMakeFiles/gripper_pkg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2993,7 +3110,7 @@ clean: simple_navigation_goals/CMakeFiles/move_base_msgs_generate_messages_lisp.
 simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/all:
 	$(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/depend
 	$(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=66,67 "Built target simple_navigation_goals"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ros_ws/build/CMakeFiles --progress-num=72,73 "Built target simple_navigation_goals"
 .PHONY : simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/all
 
 # Include target in all.
