@@ -25,7 +25,7 @@ int main(int argc, char** argv){
   float piDiv6=pi/6;
   
   // define the quaternion from euler angles
-  q = tf::createQuaternionFromRPY(0, 0, piDiv4);
+  q = tf::createQuaternionFromRPY(0, 0, -piDiv4);
   transform.setOrigin(tf::Vector3(0.0, 0.0, 0.0));
   transform.setRotation(q);
   
@@ -35,18 +35,9 @@ int main(int argc, char** argv){
   goal.target_pose.header.frame_id = "base_link";
   goal.target_pose.header.stamp = ros::Time::now();
 
-  goal.target_pose.pose.position.x = 0.4;
-  goal.target_pose.pose.position.y = 0.3;
-  /*
-  tf2::Quaternion Q;
-  Q.setRPY( 0, 0, piDiv4);
-  Q.normalize();
-    
-  ROS_INFO_STREAM(Q[0]);
-  ROS_INFO_STREAM(Q[1]);
-  ROS_INFO_STREAM(Q[2]);
-  ROS_INFO_STREAM(Q[3]);  
-  */
+  goal.target_pose.pose.position.x = 0.170;
+  goal.target_pose.pose.position.y = -0.120;
+
   ROS_INFO_STREAM(q[0]);
   ROS_INFO_STREAM(q[1]);
   ROS_INFO_STREAM(q[2]);
